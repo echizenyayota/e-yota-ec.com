@@ -23,6 +23,7 @@
     <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <link rel="canonical" href="/article.html">
     <link rel="shortcut icon" href="amp_favicon.png">
 
@@ -54,9 +55,6 @@
         padding: 0.5em;
         margin: 0.5em;
       }
-      /* amp-fit-text {
-          white-space: normal;
-      } */
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script type="application/ld+json">
@@ -137,24 +135,28 @@
           <amp-img src="mountains-3.jpg" width="300" height="168" layout="responsive"></amp-img>
       </amp-carousel>
 
-      <!-- <amp-carousel layout="fixed-height" height="250" type="carousel" >
-        <amp-img src="blocky-mountains-1.jpg" width="300" height="250"></amp-img>
-
-        <amp-ad width="300" height="250"
-          type="doubleclick"
-          data-slot="/35096353/amptesting/image/static">
-            <div placeholder>This ad is still loading.</div>
-        </amp-ad>
-
-        <amp-fit-text width="300" height="250" layout="fixed">
-            Big, bold article quote goes here.
-        </amp-fit-text>
-      </amp-carousel> -->
-
       <amp-fit-text width="300" height="250" layout="fixed">
           Big, bold article quote goes here.
       </amp-fit-text>
 
     </article>
+    <amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+          "vars": {
+            "account": "UA-YYYY-Y"
+          },
+          "triggers": {
+            "default pageview": {
+              "on": "visible",
+              "request": "pageview",
+              "vars": {
+                "title": "Name of the Article"
+              }
+            }
+          }
+        }
+    </script>
+</amp-analytics>
   </body>
 </html>
