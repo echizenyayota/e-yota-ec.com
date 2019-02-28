@@ -22,6 +22,7 @@
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <link rel="canonical" href="/article.html">
     <link rel="shortcut icon" href="amp_favicon.png">
 
@@ -53,6 +54,9 @@
         padding: 0.5em;
         margin: 0.5em;
       }
+      /* amp-fit-text {
+          white-space: normal;
+      } */
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script type="application/ld+json">
@@ -123,39 +127,34 @@
            data-adinstanceid = "fe746097-f142-4f8d-8dfb-45ec747632e5"
            data-regionurl = "https://z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US">
         </amp-ad>
-        <amp-ad
-          width="300"
-          height="250"
-          type="doubleclick"
-          data-slot="/35096353/amptesting/geo/uk">
-          <div fallback>No ad appeared because you're not browsing from the UK!</div>
-        </amp-ad>
-
-        <amp-ad
-          width="300"
-          height="250"
-          type="doubleclick"
-          data-slot="/35096353/amptesting/geo/us">
-          <div fallback>No ad appeared because you're not browsing from the US!</div>
-        </amp-ad>
       <h1>Article Name</h1>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
 
-      <amp-img src="mountains.jpg" layout="responsive" width="266" height="150"></amp-img>
+      <amp-carousel layout="responsive" width="300" height="168" type="slides" autoplay delay="2000" loop>
+          <amp-img src="mountains-1.jpg" width="300" height="168" layout="responsive"></amp-img>
+          <amp-img src="mountains-2.jpg" width="300" height="168" layout="responsive"></amp-img>
+          <amp-img src="mountains-3.jpg" width="300" height="168" layout="responsive"></amp-img>
+      </amp-carousel>
 
-      <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">
+      <!-- <amp-carousel layout="fixed-height" height="250" type="carousel" >
+        <amp-img src="blocky-mountains-1.jpg" width="300" height="250"></amp-img>
+
+        <amp-ad width="300" height="250"
+          type="doubleclick"
+          data-slot="/35096353/amptesting/image/static">
+            <div placeholder>This ad is still loading.</div>
+        </amp-ad>
+
+        <amp-fit-text width="300" height="250" layout="fixed">
+            Big, bold article quote goes here.
+        </amp-fit-text>
+      </amp-carousel> -->
+
+      <amp-fit-text width="300" height="250" layout="fixed">
           Big, bold article quote goes here.
       </amp-fit-text>
-      <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">
-          Hello!
-      </amp-fit-text>
-      <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">
-          And the Raven, never flitting, still is sitting, still is sitting. On the pallid bust of Pallas just above my chamber door; And his eyes have all the seeming of a demon’s that is dreaming, And the lamp-light o’er him streaming throws his shadow on the floor; And my soul from out that shadow that lies floating on the floor. Shall be lifted—nevermore!
-      </amp-fit-text>
-      <amp-fit-text width="400" height="400" layout="responsive" max-font-size="42">
-          こんにちは！
-      </amp-fit-text>
+
     </article>
   </body>
 </html>
