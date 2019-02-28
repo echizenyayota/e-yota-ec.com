@@ -1,12 +1,12 @@
 <!--
  Copyright 2016 Google Inc.
- 
+
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
- 
+
       http://www.apache.org/licenses/LICENSE-2.0
- 
+
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,7 +19,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
     <link rel="canonical" href="/article.html">
     <link rel="shortcut icon" href="amp_favicon.png">
 
@@ -92,12 +94,68 @@
     <header>
       News Site
     </header>
+    <amp-twitter
+      width="486"
+      height="657"
+      layout="responsive"
+      data-tweetid="1101020697038446593">
+    </amp-twitter>
+    <amp-youtube
+      data-videoid="npum8JsITQE"
+      layout="responsive"
+      width="480"
+      height="270">
+      <div fallback>
+        <p>The video could not be loaded.</p>
+      </div>
+    </amp-youtube>
     <article>
+        <amp-ad
+          width="300"
+          height="250"
+          type="doubleclick"
+          data-slot="/35096353/amptesting/image/static">
+        </amp-ad>
+        <amp-ad width="300" height="250"
+           type = "a9"
+           data-amzn_assoc_ad_mode = "auto"
+           data-recomtype = "sync"
+           data-adinstanceid = "fe746097-f142-4f8d-8dfb-45ec747632e5"
+           data-regionurl = "https://z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US">
+        </amp-ad>
+        <amp-ad
+          width="300"
+          height="250"
+          type="doubleclick"
+          data-slot="/35096353/amptesting/geo/uk">
+          <div fallback>No ad appeared because you're not browsing from the UK!</div>
+        </amp-ad>
+
+        <amp-ad
+          width="300"
+          height="250"
+          type="doubleclick"
+          data-slot="/35096353/amptesting/geo/us">
+          <div fallback>No ad appeared because you're not browsing from the US!</div>
+        </amp-ad>
       <h1>Article Name</h1>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
 
       <amp-img src="mountains.jpg" layout="responsive" width="266" height="150"></amp-img>
+
+      <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">
+          Big, bold article quote goes here.
+      </amp-fit-text>
+      <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">
+          Hello!
+      </amp-fit-text>
+      <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">
+          And the Raven, never flitting, still is sitting, still is sitting. On the pallid bust of Pallas just above my chamber door; And his eyes have all the seeming of a demon’s that is dreaming, And the lamp-light o’er him streaming throws his shadow on the floor; And my soul from out that shadow that lies floating on the floor. Shall be lifted—nevermore!
+      </amp-fit-text>
+      <amp-fit-text width="400" height="400" layout="responsive" max-font-size="42">
+          こんにちは！
+      </amp-fit-text>
     </article>
   </body>
 </html>
