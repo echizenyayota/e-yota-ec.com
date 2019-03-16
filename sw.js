@@ -1,6 +1,7 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/',
+  // '/',
+  '/article.amp.html',
   '/base.js',
   '/base.css',
   '/amp_favicon.png',
